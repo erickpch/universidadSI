@@ -1,0 +1,37 @@
+<app-layout></app-layout>
+ 
+<body>
+      
+    <div class="form-container mat-elevation-z2">
+    <h2>Gestions</h2>
+    <form [formGroup]="formGestion">
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        </div>
+       
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Año</mat-label>
+                <input matInput formControlName="year">
+            </mat-form-field>
+            </div>
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Tipo de gestión</mat-label>
+            <mat-select formControlName="tipoG">
+                <mat-option *ngFor="let tipo of tipoGestiones" [value]="tipo.id">{{ tipo.nombre }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="button-group">
+        <button mat-flat-button (click)="guardar()">Guardar</button>
+        <button mat-flat-button (click)="volver()">Volver</button>
+        </div>
+    </form>
+    </div>
+</body>

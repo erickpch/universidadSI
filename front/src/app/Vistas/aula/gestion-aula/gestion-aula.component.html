@@ -1,0 +1,36 @@
+<app-layout></app-layout>
+ 
+<body>
+      
+    <div class="form-container mat-elevation-z2">
+    <h2>Aulas</h2>
+    <form [formGroup]="formAula">
+        
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Módulo</mat-label>
+                <input matInput type="number" formControlName="modulo">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Piso</mat-label>
+                <input matInput type="text" formControlName="piso">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Número</mat-label>
+                <input matInput formControlName="numero">
+            </mat-form-field>
+        </div>
+
+        <div class="button-group">
+        <button mat-flat-button (click)="guardar()">Guardar</button>
+        <button mat-flat-button (click)="volver()">Volver</button>
+        </div>
+    </form>
+    </div>
+</body>

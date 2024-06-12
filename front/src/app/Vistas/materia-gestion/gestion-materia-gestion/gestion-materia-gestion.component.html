@@ -1,0 +1,60 @@
+<app-layout></app-layout>
+ 
+<body>
+      
+    <div class="form-container mat-elevation-z2">
+    <h2>Carreras</h2>
+    <form [formGroup]="formMateriaGestion">
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Grupo</mat-label>
+            <input matInput formControlName="grupo">
+        </mat-form-field>
+        </div>
+       
+
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Materia</mat-label>
+            <mat-select formControlName="id_materia">
+                <mat-option *ngFor="let materia of materias" [value]="materia.id">{{ materia.nombre }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Gestion</mat-label>
+                <mat-select formControlName="id_gestion">
+                    <mat-option *ngFor="let gestion of gestions" [value]="gestion.id">{{ gestion.nombre }}</mat-option>
+                  </mat-select>
+            </mat-form-field>
+        </div>
+
+        
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Aula</mat-label>
+            <mat-select formControlName="id_aula">
+                <mat-option *ngFor="let aula of aulas " [value]="aula.id">{{ aula.numero }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Docente</mat-label>
+            <mat-select formControlName="id_docente">
+                <mat-option *ngFor="let docente of docentes " [value]="docente.id">{{ docente.nombre }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="button-group">
+        <button mat-flat-button (click)="guardar()">Guardar</button>
+        <button mat-flat-button (click)="volver()">Volver</button>
+        </div>
+    </form>
+    </div>
+</body>

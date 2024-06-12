@@ -1,0 +1,49 @@
+<app-layout></app-layout>
+ 
+<body>
+      
+    <div class="form-container mat-elevation-z2">
+    <h2>Materias</h2>
+    <form [formGroup]="formMateria">
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        </div>
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Sigla</mat-label>
+            <input matInput formControlName="sigla">
+        </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field appearance="outline">
+                <mat-label>Semestre</mat-label>
+                <mat-select formControlName="semestre">
+                    <mat-option *ngFor="let semestre of semestres" [value]="semestre">
+                        {{ semestre }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Carrera</mat-label>
+            <mat-select formControlName="carrera">
+                <mat-option *ngFor="let carrera of carreras" [value]="carrera.id">{{ carrera.nombre }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="button-group">
+        <button mat-flat-button (click)="guardar()">Guardar</button>
+        <button mat-flat-button (click)="volver()">Volver</button>
+        </div>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,32 @@
+<app-layout></app-layout>
+ 
+<body>
+      
+    <div class="form-container mat-elevation-z2">
+    <h2>Carreras</h2>
+    <form [formGroup]="formCarrera">
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        </div>
+       
+
+
+        <div class="flex">
+        <mat-form-field appearance="outline">
+            <mat-label>Modalidad</mat-label>
+            <mat-select formControlName="modalidades">
+                <mat-option *ngFor="let modalidad of modalidades" [value]="modalidad.id">{{ modalidad.nombre }}</mat-option>
+              </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="button-group">
+        <button mat-flat-button (click)="guardar()">Guardar</button>
+        <button mat-flat-button (click)="volver()">Volver</button>
+        </div>
+    </form>
+    </div>
+</body>
