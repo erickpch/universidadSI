@@ -178,9 +178,14 @@ h2 {
 @import url(https://fonts.googleapis.com/css?family=Work+Sans);
 
 body {
-  background-color: #2a80b9;
+  background-color: #3b183a;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+.content {
+  display: flex;
 }
 
 .wrapper {
@@ -208,7 +213,7 @@ body {
 }
 
 .wrapper .container .part.card-details h1 {
-  background-color: #00b0ff;
+  background-color: #183b19;
   color: white;
   font-family: sans-serif;
   font-weight: 700;

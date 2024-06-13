@@ -32,55 +32,56 @@
   </div>
 </body>
  -->
+<div class="content">
+  <app-layout></app-layout>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <article class="part card-details">
+          <h1>Carreras</h1>
+          <form [formGroup]="formCarrera" autocomplete="off">
+            <div class="group-flex">
+              <div class="group card-name">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  matInput
+                  formControlName="nombre"
+                />
+              </div>
 
-<app-layout></app-layout>
-<body>
-  <div class="wrapper">
-    <div class="container">
-      <article class="part card-details">
-        <h1>Carreras</h1>
-        <form [formGroup]="formCarrera" autocomplete="off">
-          <div class="group-flex">
-            <div class="group card-name">
-              <label for="name">Nombre</label>
-              <input
-                type="text"
-                placeholder="Nombre"
-                matInput
-                formControlName="nombre"
-              />
-            </div>
-
-            <div class="flex">
-              <mat-form-field appearance="outline">
-                <mat-label style="color: black; font-size: 15px"
-                  >Modalidad</mat-label
-                >
-                <mat-select
-                  style="border-bottom: 1px solid #d9d9d9; color: black"
-                  formControlName="modalidades"
-                >
-                  <mat-option
-                    *ngFor="let modalidad of modalidades"
-                    [value]="modalidad.id"
-                    style="color: black; background-color: white"
-                    >{{ modalidad.nombre }}</mat-option
+              <div class="flex">
+                <mat-form-field appearance="outline">
+                  <mat-label style="color: black; font-size: 15px"
+                    >Modalidad</mat-label
                   >
-                </mat-select>
-              </mat-form-field>
+                  <mat-select
+                    style="border-bottom: 1px solid #d9d9d9; color: black"
+                    formControlName="modalidades"
+                  >
+                    <mat-option
+                      *ngFor="let modalidad of modalidades"
+                      [value]="modalidad.id"
+                      style="color: black; background-color: white"
+                      >{{ modalidad.nombre }}</mat-option
+                    >
+                  </mat-select>
+                </mat-form-field>
+              </div>
             </div>
-          </div>
 
-          <div class="grup submit-group">
-            <button type="submit" class="submit" (click)="guardar()">
-              Guardar
-            </button>
-            <button type="submit" class="submit" (click)="volver()">
-              Volver
-            </button>
-          </div>
-        </form>
-      </article>
+            <div class="grup submit-group">
+              <button type="submit" class="submit" (click)="guardar()">
+                Guardar
+              </button>
+              <button type="submit" class="submit" (click)="volver()">
+                Volver
+              </button>
+            </div>
+          </form>
+        </article>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
+</div>
