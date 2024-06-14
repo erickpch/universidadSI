@@ -34,52 +34,54 @@
 </body>
  -->
 
-<app-layout></app-layout>
-<body>
-  <div class="wrapper">
-    <div class="container">
-      <article class="part card-details">
-        <h1>Aulas</h1>
-        <form [formGroup]="formAula" autocomplete="off">
-          <div class="group-flex">
-            <div class="group card-name">
-              <label for="name">Módulo</label>
-              <input
-                placeholder="Nombre"
-                matInput
-                type="number"
-                formControlName="modulo"
-              />
+<div class="content">
+  <app-layout></app-layout>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <article class="part card-details">
+          <h1>Aulas</h1>
+          <form [formGroup]="formAula" autocomplete="off">
+            <div class="group-flex">
+              <div class="group card-name">
+                <label for="name">Módulo</label>
+                <input
+                  placeholder="Nombre"
+                  matInput
+                  type="number"
+                  formControlName="modulo"
+                />
+              </div>
+              <div class="group card-name">
+                <label for="name">Piso</label>
+                <input
+                  placeholder="piso"
+                  matInput
+                  type="text"
+                  formControlName="piso"
+                />
+              </div>
             </div>
-            <div class="group card-name">
-              <label for="name">Piso</label>
-              <input
-                placeholder="piso"
-                matInput
-                type="text"
-                formControlName="piso"
-              />
-            </div>
-          </div>
 
-          <div class="group-flex">
-            <div class="group card-name">
-              <label for="name">Número</label>
-              <input placeholder="codigo" matInput formControlName="numero" />
+            <div class="group-flex">
+              <div class="group card-name">
+                <label for="name">Número</label>
+                <input placeholder="codigo" matInput formControlName="numero" />
+              </div>
+              <div class="group card-name"></div>
             </div>
-            <div class="group card-name"></div>
-          </div>
 
-          <div class="grup submit-group">
-            <button type="submit" class="submit" (click)="guardar()">
-              Guardar
-            </button>
-            <button type="submit" class="submit" (click)="volver()">
-              Volver
-            </button>
-          </div>
-        </form>
-      </article>
+            <div class="grup submit-group">
+              <button type="submit" class="submit" (click)="guardar()">
+                Guardar
+              </button>
+              <button type="submit" class="submit" (click)="volver()">
+                Volver
+              </button>
+            </div>
+          </form>
+        </article>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
+</div>

@@ -10,10 +10,14 @@ body {
 }
 
 .container {
-  background-color: #2b7ebd;
-  padding: 20px;
-  height: 80%;
+  background-color: #3b183a;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.fullWidth {
+  width: 100%;
+  padding: 30px;
 }
 
 h2 {
@@ -69,7 +73,8 @@ tbody td {
   text-align: center;
 }
 
-.modify-button, .delete-button {
+.modify-button,
+.delete-button {
   background-color: #8da5e6;
   border: none;
   color: #ffffff;
@@ -78,7 +83,8 @@ tbody td {
   cursor: pointer;
 }
 
-.modify-button:hover, .delete-button:hover {
+.modify-button:hover,
+.delete-button:hover {
   background-color: #37539e;
 }
 
